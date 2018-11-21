@@ -1,2 +1,20 @@
 ---
 # tasks file for CiCd
+- name: Create application CI/CD namespace 
+  k8s:
+    name: "{{ ci_cd_namespace }}"
+    api_version: v1
+    kind: Namespace
+    state: present
+- name: Create application test namespace 
+  k8s:
+    name: "{{ test_namespace }}"
+    api_version: v1
+    kind: Namespace
+    state: present      
+- name: Create application prod namespace 
+  k8s:
+    name: "{{ prod_namespace }}"
+    api_version: v1
+    kind: Namespace
+    state: present    

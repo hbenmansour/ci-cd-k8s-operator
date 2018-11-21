@@ -6,7 +6,7 @@ subjects:
 - kind: ServiceAccount
   name: cicd-operator
   # Replace this with the namespace the operator is deployed in.
-  namespace: REPLACE_NAMESPACE
+  namespace: cicdoperator
 roleRef:
   kind: ClusterRole
   name: cicd-operator

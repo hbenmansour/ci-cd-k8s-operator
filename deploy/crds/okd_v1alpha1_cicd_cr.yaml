@@ -4,4 +4,6 @@ metadata:
   name: example-cicd
 spec:
   # Add fields here
-  size: 3
+  ci_cd_amespace: labs-ci-cd
+  test_namespace: labs-test
+  prod_namespece: labs-prod
