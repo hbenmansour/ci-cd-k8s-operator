@@ -1,0 +1,5 @@
+---
+- version: v1alpha1
+  group: okd.mycompany.com
+  kind: CiCd
+  role: /opt/ansible/roles/CiCd

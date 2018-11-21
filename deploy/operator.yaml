@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cicd-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: cicd-operator
+  template:
+    metadata:
+      labels:
+        name: cicd-operator
+    spec:
+      serviceAccountName: cicd-operator
+      containers:
+        - name: cicd-operator
+          # Replace this with the built image name
+          image: REPLACE_IMAGE
+          ports:
+          - containerPort: 60000
+            name: metrics
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              value: ""
+            - name: OPERATOR_NAME
+              value: "cicd-operator"

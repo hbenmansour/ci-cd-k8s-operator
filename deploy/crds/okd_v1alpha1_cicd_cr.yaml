@@ -1,0 +1,7 @@
+apiVersion: okd.mycompany.com/v1alpha1
+kind: CiCd
+metadata:
+  name: example-cicd
+spec:
+  # Add fields here
+  size: 3
